@@ -41,7 +41,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'copy source  folder'
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/uploads/*'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/uploads'
     contents: |
        **
        !assets/**
@@ -57,7 +57,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'copy assets'
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)/assets/*'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/assets'
     contents: |
       assets/**
     #!'$(System.DefaultWorkingDirectory)/projects/${{ parameters.applicationname }}/dist/assets'
